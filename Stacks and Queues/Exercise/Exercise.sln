@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastFood", "FastFood\FastFo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FashionBoutique", "FashionBoutique\FashionBoutique.csproj", "{2D525C07-67B3-47CD-8A48-1EB47E8E5419}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TruckTour", "TruckTour\TruckTour.csproj", "{B9025BD9-D7F1-4F5D-A065-8FF5B7192146}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{2D525C07-67B3-47CD-8A48-1EB47E8E5419}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D525C07-67B3-47CD-8A48-1EB47E8E5419}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D525C07-67B3-47CD-8A48-1EB47E8E5419}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9025BD9-D7F1-4F5D-A065-8FF5B7192146}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9025BD9-D7F1-4F5D-A065-8FF5B7192146}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9025BD9-D7F1-4F5D-A065-8FF5B7192146}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9025BD9-D7F1-4F5D-A065-8FF5B7192146}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
