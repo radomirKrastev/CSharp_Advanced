@@ -63,45 +63,45 @@ namespace KnightGame
         }
 
         public static int ReturnAttacks
-            (char[,] chess, int rows, int cols, int currentRow, int currentCol, int attacks)
+            (char[,] chess, int rows, int cols, int row, int col, int attacks)
         {
             //check up-left
-            if (IsInTheBoard(currentRow - 2, currentCol - 1, rows, cols) && chess[currentRow - 2, currentCol - 1] == 'K')
+            if (IsInTheBoard(row - 2, col - 1, rows, cols) && chess[row - 2, col - 1] == 'K')
             {
                 attacks++;
             }
             //check up-right
-            if (IsInTheBoard(currentRow - 2, currentCol + 1, rows, cols) && chess[currentRow - 2, currentCol + 1] == 'K')
+            if (IsInTheBoard(row - 2, col + 1, rows, cols) && chess[row - 2, col + 1] == 'K')
             {
                 attacks++;
             }
             //check down-right
-            if (IsInTheBoard(currentRow + 2, currentCol + 1, rows, cols) && chess[currentRow + 2, currentCol + 1] == 'K')
+            if (IsInTheBoard(row + 2, col + 1, rows, cols) && chess[row + 2, col + 1] == 'K')
             {
                 attacks++;
             }
             //check down-left
-            if (IsInTheBoard(currentRow + 2, currentCol - 1, rows, cols) && chess[currentRow + 2, currentCol - 1] == 'K')
+            if (IsInTheBoard(row + 2, col - 1, rows, cols) && chess[row + 2, col - 1] == 'K')
             {
                 attacks++;
             }
             //check right-up
-            if (IsInTheBoard(currentRow + 1, currentCol + 2, rows, cols) && chess[currentRow + 1, currentCol + 2] == 'K')
+            if (IsInTheBoard(row + 1, col + 2, rows, cols) && chess[row + 1, col + 2] == 'K')
             {
                 attacks++;
             }
             //check right-down
-            if (IsInTheBoard(currentRow - 1, currentCol + 2, rows, cols) && chess[currentRow - 1, currentCol + 2] == 'K')
+            if (IsInTheBoard(row - 1, col + 2, rows, cols) && chess[row - 1, col + 2] == 'K')
             {
                 attacks++;
             }
             //check left-up
-            if (IsInTheBoard(currentRow - 1, currentCol - 2, rows, cols) && chess[currentRow - 1, currentCol - 2] == 'K')
+            if (IsInTheBoard(row - 1, col - 2, rows, cols) && chess[row - 1, col - 2] == 'K')
             {
                 attacks++;
             }
             //check left-down
-            if (IsInTheBoard(currentRow + 1, currentCol - 2, rows, cols) && chess[currentRow + 1, currentCol - 2] == 'K')
+            if (IsInTheBoard(row + 1, col - 2, rows, cols) && chess[row + 1, col - 2] == 'K')
             {
                 attacks++;
             }
