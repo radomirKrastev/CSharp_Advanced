@@ -105,6 +105,7 @@ namespace KnightGame
             {
                 attacks++;
             }
+
             return attacks;
         }
 
