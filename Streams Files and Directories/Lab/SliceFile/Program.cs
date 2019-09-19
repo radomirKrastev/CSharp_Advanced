@@ -16,19 +16,28 @@ namespace SliceFile
                 for (int i = 1; i <= parts; i++)
                 {
                     var currentPartSize = 0;
-
-                    using(var createFile = new FileStream($"Part-{i}.txt", FileMode.Create))
+                    
+                    using (var writeFile = new FileStream($"Part-{i}.txt", FileMode.Create))
                     {
-                        var buffer = new Byte[partSize];
-                        var read = readFile.Read(buffer, 0, buffer.Length);
-
-                        while (read == buffer.Length)
+                        while (true)
                         {
-                            currentPartSize += buffer.Length;
-                            createFile.Write(buffer, 0, Math.Min(buffer.Length,partSize-currentPartSize));
-                            if (currentPartSize >= partSize)
+                            var buffer = new Byte[4096];
+                            var read = readFile.Read(buffer, 0, buffer.Length);
+
+                            if (read == 0)
                             {
                                 break;
+                            }
+
+                            if(currentPartSize+read >= partSize)
+                            {
+                                writeFile.Write(buffer, 0, partSize-currentPartSize);
+                                break;
+                            }
+                            else
+                            {
+                                writeFile.Write(buffer, 0, buffer.Length);
+                                currentPartSize += read;
                             }
                         }
                     }

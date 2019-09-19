@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeFiles", "MergeFiles\Me
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SliceFile", "SliceFile\SliceFile.csproj", "{4829378B-1CEB-4023-8288-F6884411F613}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FolderSize", "FolderSize\FolderSize.csproj", "{7A249B51-E1A9-42FB-BDAF-A6D4B3F3854F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{4829378B-1CEB-4023-8288-F6884411F613}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4829378B-1CEB-4023-8288-F6884411F613}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4829378B-1CEB-4023-8288-F6884411F613}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A249B51-E1A9-42FB-BDAF-A6D4B3F3854F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A249B51-E1A9-42FB-BDAF-A6D4B3F3854F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A249B51-E1A9-42FB-BDAF-A6D4B3F3854F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A249B51-E1A9-42FB-BDAF-A6D4B3F3854F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
