@@ -7,10 +7,7 @@ namespace ActionPoint
     {
         public static void Main()
         {
-            var strings = Console.ReadLine().Split();
-            Action<string> print;
-            print = s => Console.WriteLine(s);
-            strings.ToList().ForEach(print);
+            Console.ReadLine().Split().ToList().ForEach(Console.WriteLine);
         }
     }
 }
