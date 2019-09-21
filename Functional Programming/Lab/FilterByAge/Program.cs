@@ -8,8 +8,8 @@ namespace FilterByAge
     {
         public class Person
         {
-            public string Name { get;set; }
-            public int Age { get;set; }
+            public string Name { get; set; }
+            public int Age { get; set; }
         }
 
         public static void Main()
@@ -29,62 +29,34 @@ namespace FilterByAge
             var border = int.Parse(Console.ReadLine());
             var printRule = Console.ReadLine();
 
-            Func<List<Person>, int, string, List<Person>> filter = FilterByAge;
-            Action<List<Person>, string> print = Print;
-            filter(people, border, condition);
-            print(people, printRule);
-        }
-
-        public static void Print (List<Person> data, string rule)
-        {
-            switch (rule)
+            Func<Person, bool> filterPredicate;
+            if (condition == "younger")
             {
-                case "age":
-                    {
-                        foreach (var person in data)
-                        {
-                            Console.WriteLine(person.Age);
-                        }
-                    }
-                    break;
-                case "name":
-                    {
-                        foreach (var person in data)
-                        {
-                            Console.WriteLine(person.Name);
-                        }
-                    }
-                    break;
-                case "name age":
-                    {
-                        foreach (var person in data)
-                        {
-                            Console.WriteLine(person.Name+" - "+person.Age);
-                        }
-                    }
-                    break;
+                filterPredicate = p => p.Age <= border;
             }
-        }
-
-        public static List<Person> FilterByAge(List<Person> data, int border, string condition)
-        {
-            var filteredData = new List<Person>();
-            switch (condition)
+            else
             {
-                case "younger":
-                    {
-                        filteredData = data.Where(x => x.Age <= border).ToList();
-                    }
-                    break;
-                case "older":
-                    {
-                        filteredData = data.Where(x => x.Age >= border).ToList();
-                    }
-                    break;
+                filterPredicate = p => p.Age >= border;
             }
 
-            data = filteredData;
-            return data;
+            Action<Person> print;
+            if (printRule == "age")
+            {
+                print = p => Console.WriteLine(p.Age);
+            }
+            else if (printRule == "name")
+            {
+                print = p => Console.WriteLine(p.Name);
+            }
+            else
+            {
+                print = p => Console.WriteLine(p.Name + " - " + p.Age);
+            }
+
+            people
+                .Where(filterPredicate)
+                .ToList()
+                .ForEach(print);
         }
     }
 }
