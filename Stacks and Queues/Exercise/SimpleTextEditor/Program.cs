@@ -18,24 +18,13 @@ namespace SimpleTextEditor
                 var command = Console.ReadLine().Split();
                 if (command[0] == "1")
                 {
-                    lastModification.Push(text.ToString());
+                    lastModification.Push(text);
                     text += command[1];
                 }
                 else if (command[0] == "2")
                 {
-                    if (text.Length > 0)
-                    {
-                        lastModification.Push(text.ToString());
-                        var symbolsToRemove = int.Parse(command[1]);
-                        if (symbolsToRemove >= text.Length)
-                        {
-                            text = string.Empty;
-                        }
-                        else
-                        {
-                            text.Remove(text.Length - symbolsToRemove - 1, symbolsToRemove);
-                        }
-                    }
+                    lastModification.Push(text);
+                    text = text.Substring(0, text.Length - int.Parse(command[1]));
                 }
                 else if (command[0] == "3")
                 {
