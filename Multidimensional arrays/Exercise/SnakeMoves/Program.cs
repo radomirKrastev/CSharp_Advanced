@@ -26,11 +26,22 @@ namespace SnakeMoves
 
             for (int row = 0; row < rows; row++)
             {
-                for (int col = 0; col < cols; col++)
+                if (row % 2 == 0)
                 {
-                    matrix[row, col] = snake.Dequeue();
-                    snake.Enqueue(matrix[row, col]);
+                    for (int col = 0; col < cols; col++)
+                    {
+                        matrix[row, col] = snake.Dequeue();
+                        snake.Enqueue(matrix[row, col]);
+                    }
                 }
+                else
+                {
+                    for (int col = cols-1; col >=0; col--)
+                    {
+                        matrix[row, col] = snake.Dequeue();
+                        snake.Enqueue(matrix[row, col]);
+                    }
+                }                
             }
 
             for (int row = 0; row < rows; row++)
