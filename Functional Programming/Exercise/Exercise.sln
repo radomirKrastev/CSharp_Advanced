@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartyReservationFilterModul
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriFunction", "TriFunction\TriFunction.csproj", "{C7559F5C-D3BE-462E-B2A0-06BBF3AD42CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriFunctionAnotherApproach", "TriFunctionAnotherApproach\TriFunctionAnotherApproach.csproj", "{87168029-3FA9-4FFF-9813-4E35FA593F85}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{C7559F5C-D3BE-462E-B2A0-06BBF3AD42CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7559F5C-D3BE-462E-B2A0-06BBF3AD42CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7559F5C-D3BE-462E-B2A0-06BBF3AD42CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87168029-3FA9-4FFF-9813-4E35FA593F85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87168029-3FA9-4FFF-9813-4E35FA593F85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87168029-3FA9-4FFF-9813-4E35FA593F85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87168029-3FA9-4FFF-9813-4E35FA593F85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
