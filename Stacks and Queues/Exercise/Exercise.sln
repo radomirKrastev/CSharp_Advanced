@@ -21,9 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleTextEditor", "SimpleT
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crossroads", "Crossroads\Crossroads.csproj", "{E9F24086-A7A2-4C58-881F-EF3A7F3ED709}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyRevolver", "KeyRevolver\KeyRevolver.csproj", "{7E6C101A-FC0D-45FF-BAD7-10E790E1BC35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeyRevolver", "KeyRevolver\KeyRevolver.csproj", "{7E6C101A-FC0D-45FF-BAD7-10E790E1BC35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CupsAndBottles", "CupsAndBottles\CupsAndBottles.csproj", "{379506DB-2FFB-468B-9D29-F71CCA728C39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CupsAndBottles", "CupsAndBottles\CupsAndBottles.csproj", "{379506DB-2FFB-468B-9D29-F71CCA728C39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SongsQueue", "SongsQueue\SongsQueue.csproj", "{441BB968-83C5-423C-A8D3-9FB984E4502D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{379506DB-2FFB-468B-9D29-F71CCA728C39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{379506DB-2FFB-468B-9D29-F71CCA728C39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{379506DB-2FFB-468B-9D29-F71CCA728C39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{441BB968-83C5-423C-A8D3-9FB984E4502D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{441BB968-83C5-423C-A8D3-9FB984E4502D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{441BB968-83C5-423C-A8D3-9FB984E4502D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{441BB968-83C5-423C-A8D3-9FB984E4502D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
