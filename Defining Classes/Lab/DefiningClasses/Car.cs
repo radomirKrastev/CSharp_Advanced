@@ -41,6 +41,36 @@ namespace CarManufacturer
             set { this.fuelConsumption = value; }
         }
 
+        public Car()
+        {
+            this.Make = "VW";
+            this.Model = "Golf";
+            this.Year = 2025;
+            this.FuelQuantity = 200;
+            this.FuelConsumption = 10;
+        }
+
+        public Car(string make,
+            string model,
+            int year)
+            : this()
+        {
+            this.Make = make;
+            this.Model = model;
+            this.Year = year;
+        }
+
+        public Car(string make,
+            string model,
+            int year,
+            double fuelQuantity,
+            double fuelConsumption)
+            : this(make, model, year)
+        {
+            this.FuelConsumption = fuelConsumption;
+            this.FuelQuantity = fuelQuantity;
+        }
+
         public void Drive(double distance)
         {
             if(this.fuelQuantity - distance/100*this.fuelConsumption>0)
