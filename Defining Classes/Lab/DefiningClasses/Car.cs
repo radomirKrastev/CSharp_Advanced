@@ -10,7 +10,9 @@ namespace CarManufacturer
         private int year;
         private double fuelQuantity;
         private double fuelConsumption;
-
+        private Engine engine;
+        private Tire[] tires;
+        
         public string Make
         {
             get { return this.make; }
@@ -41,6 +43,18 @@ namespace CarManufacturer
             set { this.fuelConsumption = value; }
         }
 
+        public Engine Engine
+        {
+            get => this.engine;
+            set { this.engine = value; }
+        }
+
+        public Tire[] Tires
+        {
+            get => this.tires;
+            set { this.tires = value; }
+        }
+
         public Car()
         {
             this.Make = "VW";
@@ -50,25 +64,40 @@ namespace CarManufacturer
             this.FuelConsumption = 10;
         }
 
-        public Car(string make,
-            string model,
-            int year)
-            : this()
-        {
-            this.Make = make;
-            this.Model = model;
-            this.Year = year;
-        }
+        //public Car(string make,
+        //    string model,
+        //    int year)
+        //    : this()
+        //{
+        //    this.Make = make;
+        //    this.Model = model;
+        //    this.Year = year;
+        //}
 
         public Car(string make,
             string model,
             int year,
             double fuelQuantity,
             double fuelConsumption)
-            : this(make, model, year)
         {
+            this.Make = make;
+            this.Model = model;
+            this.Year = year;
             this.FuelConsumption = fuelConsumption;
             this.FuelQuantity = fuelQuantity;
+        }
+
+        public Car(string make,
+            string model,
+            int year,
+            double fuelQuantity,
+            double fuelConsumption,
+            Engine engine,
+            Tire[] tires)
+            : this(make, model, year, fuelQuantity, fuelConsumption)
+        {
+            this.Engine = engine;
+            this.Tires= tires;
         }
 
         public void Drive(double distance)
@@ -92,6 +121,15 @@ namespace CarManufacturer
             result.AppendLine($"Year: {this.year}");
             result.Append($"Fuel: {this.fuelQuantity:F2}L");
 
+            //result.AppendLine($"Engine capacity: {this.engine.Capacity}");
+            //result.AppendLine($"Engine power: {this.engine.Power}");
+            //result.Append($"Tires: ");
+            //foreach (var tire in this.tires)
+            //{
+            //    result.Append("("+tire.Year + ", " + tire.Pressure+") ");
+            //}
+
+            //Console.WriteLine(string.Join(" ", this.tires[1]));
             return result.ToString();
         }
     }
