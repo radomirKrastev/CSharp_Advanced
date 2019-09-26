@@ -6,12 +6,21 @@ namespace DefiningClasses
     {
         public static void Main()
         {
-            var person = new Person();
-            Console.WriteLine(person.Age + " " + person.Name);
-            var secondPerson = new Person(5);
-            Console.WriteLine(secondPerson.Age + " " + secondPerson.Name);
-            var thirdPerson = new Person("Gosho", 500);
-            Console.WriteLine(thirdPerson.Age + " " + thirdPerson.Name);
+            var familyCount = int.Parse(Console.ReadLine());
+            var family = new Family();
+
+            for (int i = 0; i < familyCount; i++)
+            {
+                var memberInformation = Console.ReadLine().Split(new string [] {" "},StringSplitOptions.RemoveEmptyEntries);
+                var name = memberInformation[0];
+                var age = int.Parse(memberInformation[1]);
+
+                var member = new Person(name,age);
+                family.AddMember(member);
+            }
+
+            var oldestMember = family.GetOldestMember();
+            Console.WriteLine(oldestMember.Name+" "+oldestMember.Age);
         }
     }
 }
