@@ -27,7 +27,7 @@ namespace CustomDoubleLinkedList
             Console.WriteLine();
             list.ForEach(n => Console.WriteLine(n));
             var arr = list.ToArray();
-            Console.WriteLine(string.Join(" ",arr));
+            Console.Write(string.Join(" ",arr));
         }
     }
 }
