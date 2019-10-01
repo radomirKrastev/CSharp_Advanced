@@ -15,16 +15,19 @@ namespace CustomDoubleLinkedList
             list.AddTail(7);
             list.AddHead(10);
 
-            var i = list.RemoveHead();
-            var j = list.RemoveHead();
-            var k = list.RemoveTail();
-            var l = list.RemoveTail();
-            var h = list.RemoveTail();
-            var g = list.RemoveTail();
+            //var i = list.RemoveHead();
+            //var j = list.RemoveHead();
+            //var k = list.RemoveTail();
+            //var l = list.RemoveTail();
+            //var h = list.RemoveTail();
+            //var g = list.RemoveTail();
 
-            Console.WriteLine(h);
-            Console.WriteLine(list.Head.Value);
+            //Console.WriteLine(l);
+            //Console.WriteLine(list.Head.Value);
             Console.WriteLine();
+            list.ForEach(n => Console.WriteLine(n));
+            var arr = list.ToArray();
+            Console.WriteLine(string.Join(" ",arr));
         }
     }
 }

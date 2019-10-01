@@ -133,5 +133,29 @@ namespace CustomDoubleLinkedList
                 throw new InvalidOperationException("List is empty!");
             }
         }
+
+        public void ForEach (Action<T> action)
+        {
+            var position = this.Head;
+            while (position != null)
+            {
+                action(position.Value);
+                position = position.Next;
+            }
+        }
+
+        public T[] ToArray()
+        {
+            var array = new T[this.Count];
+            var currentNode = this.Head;
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = currentNode.Value;
+                currentNode = currentNode.Next;
+            }
+
+            return array;
+        }
     }
 }
