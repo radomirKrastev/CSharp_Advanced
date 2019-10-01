@@ -15,8 +15,33 @@ namespace CustomDoubleLinkedList
             }
         }
 
-        public Node Head { get; private set; }
-        public Node Tail { get; private set; }
+        private Node head;
+        private Node tail;
+
+        public Node Head
+        {
+            get
+            {
+                ValidateIfListIsEmpty();
+
+                return this.head;
+            }
+
+            private set { this.head = value; }
+        }
+
+        public Node Tail
+        {
+            get
+            {
+                ValidateIfListIsEmpty();
+
+                return this.tail;
+            }
+
+            private set { this.tail = value; }
+        }
+
         public int Count { get; private set; }
 
         public void AddHead(T element)
@@ -59,14 +84,11 @@ namespace CustomDoubleLinkedList
 
         public T RemoveHead()
         {
-            if (this.Count == 0)
-            {
-                throw new InvalidOperationException("List is empty!");
-            }
+            ValidateIfListIsEmpty();
 
             var value = this.Head.Value;
 
-            if (this.Count == 1)
+            if (this.Head.Equals(this.Tail))
             {
                 this.Head = this.Tail = null;
             }
@@ -80,6 +102,36 @@ namespace CustomDoubleLinkedList
 
             this.Count--;
             return value;
+        }
+
+        public T RemoveTail()
+        {
+            ValidateIfListIsEmpty();
+
+            var value = this.Tail.Value;
+
+            if (this.Tail.Equals(this.Head))
+            {
+                this.Head = this.Tail = null;
+            }
+            else
+            {
+                var newTail = this.Tail.Previous;
+                newTail.Next = null;
+                this.Tail.Previous = null;
+                this.Tail = newTail;
+            }
+
+            this.Count--;
+            return value;
+        }
+
+        public void ValidateIfListIsEmpty()
+        {
+            if (this.Count == 0)
+            {
+                throw new InvalidOperationException("List is empty!");
+            }
         }
     }
 }
