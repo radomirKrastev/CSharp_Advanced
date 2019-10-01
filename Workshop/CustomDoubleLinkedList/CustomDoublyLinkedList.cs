@@ -1,4 +1,6 @@
-﻿namespace CustomDoubleLinkedList
+﻿using System;
+
+namespace CustomDoubleLinkedList
 {
     public class CustomDoublyLinkedList<T>
     {
@@ -53,6 +55,31 @@
             }
 
             this.Count++;
+        }
+
+        public T RemoveHead()
+        {
+            if (this.Count == 0)
+            {
+                throw new InvalidOperationException("List is empty!");
+            }
+
+            var value = this.Head.Value;
+
+            if (this.Count == 1)
+            {
+                this.Head = this.Tail = null;
+            }
+            else
+            {
+                var newHead = this.Head.Next;
+                newHead.Previous = null;
+                this.Head.Next = null;
+                this.Head = newHead;
+            }
+
+            this.Count--;
+            return value;
         }
     }
 }
