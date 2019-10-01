@@ -50,13 +50,37 @@ namespace CustomList
             var value = elements[index];
             elements[index] = default(T);
             Shift(index);
-            if (--this.Count * 4 == this.elements.Length)
+            if (--this.Count * 4 <= this.elements.Length)
             {
                 Shrink();
             }
 
             return value;
         }
+
+        public void Insert(int index, T element)
+        {
+            if (index > this.Count || index < 0)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+
+            if (this.Count == 0 && index == 0)
+            {
+                this.elements[this.Count++] = element;
+                return;
+            }
+
+            Add(this.elements[this.Count - 1]);
+
+            for (int i = this.Count-2; i >index ; i--)
+            {
+                this.elements[i] = this.elements[i - 1];
+            }
+
+            this.elements[index] = element;
+        }
+
 
         private void Shrink()
         {
@@ -82,7 +106,7 @@ namespace CustomList
 
         private void ValidateIndexIsOutOfRange(int index)
         {
-            if (index >= this.Count)
+            if (index >= this.Count || index<0)
             {
                 throw new ArgumentOutOfRangeException();
             }
