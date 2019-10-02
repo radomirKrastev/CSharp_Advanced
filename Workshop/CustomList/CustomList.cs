@@ -81,6 +81,33 @@ namespace CustomList
             this.elements[index] = element;
         }
 
+        public bool Contains(T element)
+        {
+            var containsElement = false;
+
+            for (int i = 0; i < this.Count; i++)
+            {
+                if (this.elements[i].Equals(element))
+                {
+                    containsElement = true;
+                    break;
+                }
+            }
+
+            return containsElement;
+        }
+
+        public void Swap(int firstIndex, int secondIndex)
+        {
+            ValidateIndexIsOutOfRange(firstIndex);
+            ValidateIndexIsOutOfRange(secondIndex);
+
+            var firstElement = this.elements[firstIndex];
+            var secondElement = this.elements[secondIndex];
+
+            this.elements[secondIndex] = firstElement;
+            this.elements[firstIndex] = secondElement;
+        }
 
         private void Shrink()
         {
