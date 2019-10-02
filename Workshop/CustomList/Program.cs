@@ -15,8 +15,8 @@ namespace CustomList
             customList.Add(5);
             customList.Add(6);
             customList.Add(7);
-            customList.Add(8);
-            customList.Add(9);
+            //customList.Add(8);
+            //customList.Add(9);
 
             //var a = customList.RemoveAt(1);
             //var b = customList.RemoveAt(4);
@@ -36,6 +36,7 @@ namespace CustomList
             //customList.Swap(7, 1);
 
             var found= customList.Find(x => x + 2 == 10);
+            customList.Reverse();
             Console.WriteLine(found);
         }
     }

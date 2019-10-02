@@ -125,6 +125,19 @@ namespace CustomList
             return element;
         }
 
+        public void Reverse()
+        {
+            var reversedArray = new T[this.elements.Length];
+            var index = 0;
+
+            for (int i = this.Count-1; i >= 0; i--)
+            {
+                reversedArray[index++] = this.elements[i];
+            }
+
+            this.elements = reversedArray;
+        }
+
         private void Shrink()
         {
             T[] newArray = new T[this.elements.Length / 4];
