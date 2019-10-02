@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace GenericArrayCreator
+﻿namespace GenericArrayCreator
 {
     public class ArrayCreator
     {
-        public T[] Create<T> (int length, T element)
+        public static T[] Create<T> (int length, T element)
         {
             var elements = new T[length];
 

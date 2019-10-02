@@ -6,11 +6,12 @@ namespace GenericArrayCreator
     {
         public static void Main()
         {
-            var strings = new ArrayCreator<string>();
 
-            string[] stringsArr = new ArrayCreator<string>().Create(5, "Gosho");
+            string[] strings = ArrayCreator.Create(5, "11");
+            int[] arr = ArrayCreator.Create(10, 11);
 
-            Console.WriteLine(string.Join(" ",stringsArr));
+
+            Console.WriteLine(string.Join(" ",arr));
         }
     }
 }
