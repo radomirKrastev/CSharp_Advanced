@@ -28,9 +28,15 @@ namespace CustomList
             //customList.Insert(5, 15);
             //Console.WriteLine(customList.Contains(8));
 
+            //var list = new List<int>() { 1, 2, 3 };
 
-            customList.Swap(7, 1);
-            Console.WriteLine();
+            //var foundElement = list.Find(x=>x+1==2);
+            //Console.WriteLine(foundElement);
+
+            //customList.Swap(7, 1);
+
+            var found= customList.Find(x => x + 2 == 10);
+            Console.WriteLine(found);
         }
     }
 }

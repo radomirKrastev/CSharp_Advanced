@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace CustomList
 {
@@ -107,6 +108,21 @@ namespace CustomList
 
             this.elements[secondIndex] = firstElement;
             this.elements[firstIndex] = secondElement;
+        }
+
+        public T Find(Predicate<T> predicate)
+        {
+            var element = default(T);
+
+            for (int i = 0; i < this.Count; i++)
+            {
+                if (predicate(this.elements[i]))
+                {
+                    element = this.elements[i];
+                }
+            }
+
+            return element;
         }
 
         private void Shrink()
