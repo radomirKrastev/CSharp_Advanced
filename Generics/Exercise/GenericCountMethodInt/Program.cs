@@ -16,7 +16,7 @@ namespace GenericCountMethodInt
             }
 
             var comparer =double.Parse(Console.ReadLine());
-            Console.WriteLine(doubles.Compare(comparer));
+            Console.WriteLine(doubles.Count(comparer));
         }
     }
 }

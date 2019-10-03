@@ -15,7 +15,7 @@ namespace GenericCountMethodString
             this.elements.Add(element);
         }
 
-        public int Compare(T element)
+        public int Count(T element)
         {
             var filteredList = this.Elements.Where(x => x.CompareTo(element) > 0).ToList();
             return filteredList.Count();

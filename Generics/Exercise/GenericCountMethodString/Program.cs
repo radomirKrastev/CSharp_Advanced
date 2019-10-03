@@ -17,7 +17,7 @@ namespace GenericCountMethodString
             }
 
             var comparer = Console.ReadLine();
-            Console.WriteLine(strings.Compare(comparer));
+            Console.WriteLine(strings.Count(comparer));
         }
     }
 }
