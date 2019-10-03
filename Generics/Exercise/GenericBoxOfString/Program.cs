@@ -10,7 +10,6 @@ namespace GenericBoxOfString
 
             for (int i = 0; i < linesCount; i++)
             {
-                //var data = int.Parse(Console.ReadLine());
                 var data = Console.ReadLine();
                 var item = new Box<string>(data);
                 item.ToString();
