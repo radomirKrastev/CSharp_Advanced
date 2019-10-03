@@ -27,7 +27,7 @@ namespace GenericSwapMethod
             var indices = Console.ReadLine().Split(" ").Select(int.Parse).ToArray();
             Swap(strings, indices[0], indices[1]);
 
-            Console.WriteLine(strings[0].GetType()+" "+ string.Join(Environment.NewLine + strings[0].GetType()+" ",strings));
+            Console.WriteLine(strings[0].GetType()+": "+ string.Join(Environment.NewLine + strings[0].GetType()+": ",strings));
         }
     }
 }
