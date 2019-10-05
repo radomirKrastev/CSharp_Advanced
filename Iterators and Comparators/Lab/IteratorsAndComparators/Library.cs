@@ -14,10 +14,7 @@ namespace IteratorsAndComparators
 
         public IEnumerator<Book> GetEnumerator()
         {
-            foreach (var book in this.books)
-            {
-                yield return book;
-            }
+            return new BookEnumerator(this.books);
         }
 
         IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
