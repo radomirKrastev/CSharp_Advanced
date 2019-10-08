@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopyBinaryFile", "CopyBinar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectoryTraversal", "DirectoryTraversal\DirectoryTraversal.csproj", "{BB844949-2E72-44D0-AA2F-6BA158E84526}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipAndExtract", "ZipAndExtract\ZipAndExtract.csproj", "{FEDACAFA-57A8-4FDB-BF76-80EA72996EE7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{BB844949-2E72-44D0-AA2F-6BA158E84526}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB844949-2E72-44D0-AA2F-6BA158E84526}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB844949-2E72-44D0-AA2F-6BA158E84526}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEDACAFA-57A8-4FDB-BF76-80EA72996EE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEDACAFA-57A8-4FDB-BF76-80EA72996EE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEDACAFA-57A8-4FDB-BF76-80EA72996EE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEDACAFA-57A8-4FDB-BF76-80EA72996EE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
