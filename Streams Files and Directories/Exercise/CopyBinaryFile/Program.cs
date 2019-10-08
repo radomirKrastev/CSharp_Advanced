@@ -28,8 +28,7 @@ namespace CopyBinaryFile
                         {
                             writer.Write(buffer, 0, buffer.Length);
                         }
-                    }
-                    
+                    }                    
                 }
             }            
         }
