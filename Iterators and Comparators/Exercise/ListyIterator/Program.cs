@@ -35,6 +35,10 @@ namespace ListyIterator
                 {
                     listyOperator.Print();
                 }
+                else if (command == "PrintAll")
+                {
+                    Console.WriteLine(string.Join(" ",listyOperator));
+                }
 
                 command = Console.ReadLine();
             }
