@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Socks", "Socks\Socks.csproj", "{F90E2201-5456-4DB1-9BD0-05726FD87EC4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelFunctions", "ExcelFunctions\ExcelFunctions.csproj", "{B8FFB025-E74B-45C5-A7EB-01B72F89E575}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F90E2201-5456-4DB1-9BD0-05726FD87EC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F90E2201-5456-4DB1-9BD0-05726FD87EC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F90E2201-5456-4DB1-9BD0-05726FD87EC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8FFB025-E74B-45C5-A7EB-01B72F89E575}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8FFB025-E74B-45C5-A7EB-01B72F89E575}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8FFB025-E74B-45C5-A7EB-01B72F89E575}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8FFB025-E74B-45C5-A7EB-01B72F89E575}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
