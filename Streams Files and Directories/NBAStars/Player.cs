@@ -1,4 +1,4 @@
-﻿namespace NBAFutureStars
+﻿namespace NBAStars
 {
     public class Player
     {
